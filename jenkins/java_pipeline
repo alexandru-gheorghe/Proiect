@@ -8,10 +8,10 @@ pipeline {
             }
 	
         }
-        post { 
-            success { 
-                junit 'results.xml'
-            }
-        }
+    }
+    post { 
+          success { 
+               junit 'results.xml'
+          }
     }
 }
