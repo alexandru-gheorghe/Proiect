@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 ls -l
+		pwd
 		cp ../../results.xml results.xml
 		ls -l
             }
