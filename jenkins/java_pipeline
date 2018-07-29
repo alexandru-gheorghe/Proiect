@@ -4,6 +4,13 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ls -l'
+                sh 'cp ../../results.xml results.xml'
+            }
+	
+        }
+        post { 
+            success { 
+                junit 'results.xml'
             }
         }
     }
