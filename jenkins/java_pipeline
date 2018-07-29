@@ -2,10 +2,12 @@ pipeline {
     agent any
     stages {
         stage('build') {
-	    agent node {
-	      git url: 'https://github.com/alexandru-gheorghe/open-source-machlib.git'
-	      sh 'ls -la'
-	    }
+	   agent {
+	     node {
+	        git url: 'https://github.com/alexandru-gheorghe/open-source-machlib.git'
+	        sh 'ls -la'
+	     }
+	   }
             steps {
                 sh 'ls -l'
                 sh 'cp ../../results.xml results.xml'
