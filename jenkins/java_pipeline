@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
 	   agent {
 	     node {
+		label 'machlib'
 	        git url: 'https://github.com/alexandru-gheorghe/open-source-machlib.git'
 	        sh 'ls -la'
 	     }
